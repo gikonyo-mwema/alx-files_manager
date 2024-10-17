@@ -1,13 +1,20 @@
 import { Router } from 'express';
-import AppController from '../controllers/AppController.js';
+import AppController from '../controllers/AppController';
+//import UsersController from '../controllers/UsersController';
+//import AuthController from '../controllers/AuthController';
 
 const router = Router();
 
-// Define the /status route
 router.get('/status', AppController.getStatus);
 
-// Define the /stats route
 router.get('/stats', AppController.getStats);
 
-export default router;
+//router.post('/users', UsersController.postNew);
 
+//router.get('/connect', AuthController.getConnect);
+
+//router.get('/disconnect', AuthController.getDisconnect);
+
+//router.get('/users/me', UsersController.getMe);
+
+module.exports = router;
